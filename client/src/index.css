@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+    font-size: 12px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 14px !important;
+  }
+  
+  * {
+    font-size: 12px !important;
+  }
+  
+  h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+    font-size: 14px !important;
+  }
+}
+
+@layer components {
+  .card-label {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+  
+  .card-count {
+    font-size: 30px !important;
+    font-weight: 700 !important;
+  }
+  
+  .btn-primary {
+    @apply bg-btn-primary text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md hover:opacity-90;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-3 px-6 rounded-xl transition-all duration-200;
+  }
+  
+ .btn-export {
+     @apply  text-primary-700 hover:bg-gray-50 font-medium py-2 px-4 rounded transition-all duration-200;
+  }
+
+  .btn-bulk {
+    @apply border border-primary-700 text-primary-700 hover:bg-gray-50 font-medium py-2 px-4 rounded transition-all duration-200;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-gray-50 focus:bg-white transition-all duration-200;
+  }
+  
+  /* Professional table styles */
+  .table-professional {
+    @apply min-w-full divide-y divide-gray-200;
+  }
+  
+  .table-professional th {
+    @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+    background-color: #efebeb !important;
+  }
+  
+  .table-professional td {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-gray-900;
+  }
+  
+  .table-professional tbody tr {
+    @apply bg-white hover:bg-gray-50 transition-colors;
+  }
+  
+  .table-professional tbody tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+}
+
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(184, 183, 183);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(184, 183, 183);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(184, 183, 183);
+}
+
+/* Curved scrollbar for table scroll containers */
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 50px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 50px;
+}
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+.scroll-container::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+  border-radius: 50px;
+}
+@layer utilities {
+  .mobile-btn-text {
+    font-size: 14px !important;
+  }
+
+  .mobile-label {
+    font-size: 14px !important;
+  }
+
+  .mobile-input {
+    font-size: 16px !important;
+  }
+
+  .mobile-heading {
+    font-size: 26px !important;
+  }
+
+  .mobile-subtext {
+    font-size: 14px !important;
+  }
+}
+
+/* Compact SweetAlert2 styling */
+.swal-compact {
+  min-height: auto !important;
+}
+
+.swal-compact .swal2-icon {
+  margin: 0.5rem auto !important;
+  width: 3rem !important;
+  height: 3rem !important;
+}
+
+.swal-compact .swal2-title {
+  font-size: 1.1rem !important;
+  margin: 0.5rem 0 !important;
+}
+
+.swal-compact .swal2-html-container {
+  margin: 0.5rem 0 !important;
+  font-size: 0.9rem !important;
+}
+
+.swal-compact .swal2-actions {
+  margin: 0.75rem 0 0 0 !important;
+}
+/* Modal animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.3s ease-out;
+}
+
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.MuiInputBase-adornedEnd.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root{
+  height: 38px !important;
+}

@@ -1,0 +1,20 @@
+export const ROUTES = {
+  LOGIN: '/login',
+  DASHBOARD: '/dashboard',
+  USERS: '/users',
+  CHECKLISTS: '/checklists',
+  CHECKLIST_FORM: '/checklist/{id}/form',
+  CHECKLIST_VIEW: '/checklist/{id}',
+  CHECKLIST_DATA: '/checklist-data',
+  ROSTER: '/roster',
+  ADMIN_ROSTER: '/admin-roster',
+  DAILY_EXTRA_ASSIGNMENT: '/daily-extra-assignment',
+  CHECKLIST_STATUS: '/checklist-status',
+  CAMERA_COUNT: '/camera-count',
+  LOGIN_REPORT: '/login-report',
+  MANIFESTS: '/manifests',
+  REPORTS: '/reports',
+  COMPLAINTS: '/complaints',
+  COMPLAINTS_CHECKLIST: '/complaints/checklist',
+  COMPLAINTS_CAMERA: '/complaints/camera'
+};

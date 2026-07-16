@@ -1,0 +1,67 @@
+{
+  "name": "va-rewamp-client",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "./",
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@mui/material": "^5.15.0",
+    "@mui/x-date-pickers": "^6.20.2",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.5.1",
+    "autoprefixer": "^10.4.16",
+    "axios": "^1.6.2",
+    "baseline-browser-mapping": "^2.10.12",
+    "dayjs": "^1.11.19",
+    "framer-motion": "^12.24.10",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^0.562.0",
+    "postcss": "^8.4.32",
+    "pptxgenjs": "^3.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.48.2",
+    "react-hot-toast": "^2.4.1",
+    "react-pro-sidebar": "^1.1.0",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.10.2",
+    "recharts": "^3.6.0",
+    "sweetalert2": "^11.26.4",
+    "tailwindcss": "^3.3.6",
+    "xlsx": "^0.18.5",
+    "xlsx-js-style": "^1.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:open": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "msw": "^2.0.11"
+  },
+  "proxy": "http://localhost:8240"
+
+}
