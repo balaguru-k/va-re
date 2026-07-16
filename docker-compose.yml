@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  # ==========================================
+  # Node.js Express Backend
+  # ==========================================
+  backend:
+    build:
+      context:./server
+      dockerfile: Dockerfile
+    image: va-backend:latest
+    container_name: backend-container
+    ports:
+      - "8536:8536" # Maps the host port 8536 to the container port 8536 
+    environment:
+      - NODE_ENV=production
+      - PORT=8536
+      - DB_HOST=host.docker.internal # Connects to host-side database [3, 4]
+      - DB_PORT=3306                 # Default MySQL Port
+      - DB_USER=app_backend
+      - DB_PASSWORD=production_secure_password
+      - DB_NAME=va_rewamp            # Database name 
+    extra_hosts:
+      - "host.docker.internal:host-gateway" # Required to bridge container to Windows host DB 
+    restart: always
+
+  # ==========================================
+  # React Frontend (Nginx Production Server)
+  # ==========================================
+  frontend:
+    build:
+      context:./client
+      dockerfile: Dockerfile
+    image: va-frontend:latest
+    container_name: frontend-container
+    ports:
+      - "3000:80" # Map client access to port 3000 on localhost 
+    restart: always
+    depends_on:
+      - backend
