@@ -10,7 +10,7 @@ COPY package*.json ./
 RUN npm ci
 
 # FIXED: Added spaces to copy instruction
-COPY..
+COPY . .
 RUN npm run build
 
 # =====================================================================
