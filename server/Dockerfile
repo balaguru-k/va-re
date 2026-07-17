@@ -8,7 +8,7 @@ COPY package*.json ./
 RUN npm ci --only=production
 
 # FIXED: Added spaces to copy instruction
-COPY..
+COPY . .
 
 EXPOSE 5000
 
