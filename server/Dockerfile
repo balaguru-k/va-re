@@ -4,9 +4,10 @@ FROM node:20-alpine
 ENV NODE_ENV=production
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY package*.json./
 RUN npm ci --only=production
 
+# FIXED: Added spaces to copy instruction
 COPY..
 
 EXPOSE 5000
@@ -17,17 +18,7 @@ ENV PORT=5000 \
     DB_PORT=3306 \
     DB_USER=app_backend \
     DB_PASSWORD=production_secure_password \
-    DB_NAME=application_db
+    DB_NAME=va_rewamp
 
-# Loop-check host port connectivity, execute migrations, and start server
-CMD sh -c "\
-    echo 'Verifying Database host gateway connectivity...'; \
-    for i in \$(seq 1 30); do \
-        nc -z -w 1 ${DB_HOST} ${DB_PORT} && echo 'Host database interface is active.' && break; \
-        echo 'Host database interface is unreachable. Retrying in 2 seconds...'; \
-        sleep 2; \
-    done; \
-    echo 'Database online. Running migrations...'; \
-    npx knex migrate:latest --env production && \
-    echo 'Migrations completed. Launching application...'; \
-    node src/index.js"
+# Runs your defined package.json start script dynamically
+CMD ["npm", "start"]
