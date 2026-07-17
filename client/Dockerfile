@@ -6,7 +6,7 @@ FROM node:20-alpine AS builder
 WORKDIR /app
 
 # Leverage layer caching for faster builds
-COPY package*.json./
+COPY package*.json ./
 RUN npm ci
 
 # Copy source code and build production assets
